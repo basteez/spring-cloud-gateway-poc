@@ -1,14 +1,2 @@
 server:
-  port: 8080
-spring:
-  cloud:
-    gateway:
-      routes:
-        - id: service1
-          uri: ${SERVICE1_URI:http://localhost:8081}
-          predicates:
-            - Path=/service1/**
-        - id: service2
-          uri: ${SERVICE2_URI:http://localhost:8082}
-          predicates:
-            - Path=/service2/**
+  port: 8083
