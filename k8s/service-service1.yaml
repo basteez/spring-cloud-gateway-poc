@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2024-12-28T15:07:00Z"
+  labels:
+    k8s-app: service1
+  name: service1
+  namespace: api-gw
+  resourceVersion: "5447"
+  uid: f545dbc9-c4e5-431d-abf7-86d9646fd382
+spec:
+  clusterIP: 10.108.125.245
+  clusterIPs:
+    - 10.108.125.245
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+    - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+    - nodePort: 31363
+      port: 8081
+      protocol: TCP
+      targetPort: 8081
+  selector:
+    k8s-app: service1
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: { }
